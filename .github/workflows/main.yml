@@ -1,2 +1,10 @@
-dependencies:
-  express: ^4.17.1
+version: '3.7'
+
+services:
+  nodejs-app:
+    image: node:latest
+    container_name: express-app
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: npm install express
